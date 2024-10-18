@@ -9966,4 +9966,164 @@ h5 > .rating {
 
 .impressum-page a:hover {
   text-decoration: underline;
+} /* Suchbutton anpassen */
+/* Für die Überschrift */
+/* Für die Überschrift */
+.stelle-head {
+  font-size: 2.5rem; /* Etwas kleinere Schriftgröße */
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Input-Felder und ihre Container */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+}
+
+.stellenangebot-input {
+  padding-left: 5rem; /* Platz für das Icon */
+  height: 3.5rem; /* Höhe des Input-Feldes */
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Button */
+.btn {
+  height: 3.5rem;
+  font-size: 1.2rem;
+  padding: 0 1.5rem;
+  width: auto;
+  min-width: 150px; /* Mindestens 150px Breite für den Button */
+}
+
+/* Flex-Anpassungen */
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.gap-2 {
+  gap: 0.5rem; /* Abstand zwischen den Elementen */
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .input-stelle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem; /* Abstand zwischen den Elementen */
+  }
+
+  /* Eingabefelder und Button nebeneinander bei kleinen Bildschirmen */
+  .input-container {
+    flex: 1 1 30%; /* Jeweils 30% Breite für die Felder */
+  }
+
+  .btn {
+    flex: 1 1 30%; /* 30% Breite für den Button */
+    width: auto; /* Breite des Buttons automatisch anpassen */
+    font-size: 1.1rem; /* Etwas kleinere Schriftgröße für den Button */
+  }
+}
+
+/* Für ganz kleine Bildschirme (Smartphones) */
+@media (max-width: 480px) {
+  .input-stelle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.25rem; /* Weniger Abstand bei ganz kleinen Bildschirmen */
+  }
+
+  .input-container {
+    flex: 1 1 32%; /* Leicht mehr Platz für die Felder */
+  }
+
+  .btn {
+    flex: 1 1 32%; /* Breite des Buttons auf 32% */
+    font-size: 1rem; /* Noch kleinere Schriftgröße für den Button */
+  }
+}
+/* Styling für Job-Karten */
+.job-card {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.job-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.job-card i {
+  color: #4ba0e8;
+  margin-right: 10px;
+}
+
+.btn-apply {
+  background-color: #4ba0e8;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn-apply:hover {
+  background-color: #357bb8;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .col-md-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+
+  .job-title {
+    font-size: 1.25rem;
+  }
 }

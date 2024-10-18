@@ -333,9 +333,46 @@
       </div>
       <!-- Slider -->
       <!-- Services block -->
-       <div class="block">
+       
+        <div class="container d-flex flex-column align-items-center py-5">
+        <p class="stelle-head">Stellenangebote</p>
         
-       </div>
+        <div class="input-stelle">
+          <div class="d-flex flex-row gap-2">
+            <div class="input-container">
+              <input
+                class="stellenangebot-input"
+                type="text"
+                id="jobTitle"
+                placeholder="job title"
+              />
+              <span class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="input-container">
+              <input
+                class="stellenangebot-input"
+                type="text"
+                id="location"
+                placeholder="City/Town/Village
+"
+              />
+              <span class="input-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+            </div>
+
+            <button class="btn btn-primary" onClick="filterJobs()">
+              search
+            </button>
+          </div>
+        </div>
+        <div class="job-position">
+          <div id="results-container"></div>
+        </div>
+      </div>
+       
 
  </main>
    
@@ -459,6 +496,7 @@
     <!-- Custom JavaScripts -->
     <script src="js/custom.js"></script>
     <script src="js/forms.js"></script>
+    <script src="js/ange.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
