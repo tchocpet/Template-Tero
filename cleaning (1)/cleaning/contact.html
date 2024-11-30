@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ihr Dienstleister vor Ort - für alle Themen rund um Ihr Haus"
+    />
+    <meta name="author" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Reinigungsservice Hachem - HTML Website Template - Contact Us</title>
+    <!-- Vendors -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/vendor/animate.min.css" rel="stylesheet" />
+    <link href="css/vendor/slick.css" rel="stylesheet" />
+    <link href="css/vendor/lightbox.css" rel="stylesheet" />
+    <link href="css/vendor/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="css/vendor/nouislider.css" rel="stylesheet" />
+    <!-- Template Style -->
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- Icon Font-->
+    <link href="fonts/icomoon/style.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+    <!-- Google map -->
+    
+    <!-- Leaflet CSS and JS for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        function initMap() {
+            var map = L.map('googleMap').setView([51.220594, 7.052526], 15); // Wuppertal coordinates
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+
+            L.marker([51.220594, 7.052526]).addTo(map)
+                .bindPopup('Ludgerweg 21, 42329 Wuppertal')
+                .openPopup();
+        }
+        document.addEventListener("DOMContentLoaded", initMap);
+    </script>
+
+    <!-- Google recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  
+<style>
+  .address-box {
+      height: 300px; /* Gleiche Höhe für beide Boxen */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+</style>
+
+
+<style>
+    #map-container {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Adjust map height as needed */
+    }
+    #map-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+    }
+    #google-map {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+
+<script>
+    function enableMap() {
+        var overlay = document.getElementById('map-overlay');
+        overlay.style.display = 'none';
+    }
+</script>
+
+</head>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+  <body>
+     <!--<div class="loading-content">
+      <div class="loaded-text" data-text=" Reinigungsservice-Hachem">
+        Reinigungsservice-Hachem
+      </div>
+    </div>-->
+    <!-- Header -->
+    <header class="page-header page-header--style2 header-sticky">
+      <div class="page-header-mobile-info">
+        <div class="page-header-mobile-info-content">
+          <div class="page-header-info">
+            <i class="icon icon-location"></i>Ludgerweg 21 42329 Wuppertal
+          </div>
+          <div class="page-header-info">
+            <i class="icon icon-clock1"></i>9:00 - 17:00 Uhr
+          </div>
+          <div class="page-header-info">
+            <i class="icon icon-phone"></i>Tel.: <a href="tel:01732765432">0173 276 54 32</a>
+          </div>
+          <div class="page-header-info">
+            <i class="icon icon-speech-bubble"></i
+            ><a href="mailto:info@rs-hachem.de">info@rs-hachem.de</a>
+          </div>
+          <ul class="social-list">
+            <li>
+              <a href="#"><i class="icon-facebook-logo1"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-twitter-logo1"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="icon-instagram-logo1"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-header-topline">
+        <div class="container">
+          <div class="page-header-mobile-info-toggle"></div>
+          <div class="page-header-topline-left">
+            <div class="page-header-info">
+              <i class="icon icon-location"></i>Ludgerweg 21 42329 Wuppertal
+            </div>
+            <div class="page-header-info">
+              <i class="icon icon-clock1"></i>9:00- 17:00 Uhr
+            </div>
+            <div class="page-header-info">
+              <i class="icon icon-phone"></i>Tel.: <a href="tel:01732765432">0173 276 54 32</a>
+            </div>
+          </div>
+          <div class="page-header-topline-right">
+            <div class="quote-button-wrap">
+              <a href="order-form.html" class="btn"
+                ><i class="icon icon-bell"></i>ein Angebot erhalten</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-header-top">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg" alt="" /></a>
+            <div class="shine"></div>
+          </div>
+          <div class="page-header-menu">
+            <div class="container">
+              <ul class="menu">
+                <li class="active">
+                  <a href="index.html">HOME<span class="arrow"></span></a>
+                  <ul class="sub-menu">
+                    </ul>
+                </li>
+                <li>
+                  <a href="about.html"> Über uns<span class="arrow"></span></a>
+                  <ul class="sub-menu">
+                    
+                  </ul>
+                </li>
+                <li>
+                  <a href="services.html"
+                    >Dienstleistungen<span class="arrow"></span
+                  ></a>
+                  <ul class="sub-menu">
+                        <li><a href="service-page-1.html">Grund- und Sonderreinigung</a></li>
+    		    <li><a href="service-page-8.html">Bauendreinigung</a></li>
+		    <li><a href="service-page-9.html">Büroreinigung</a></li>
+ 		    <li><a href="service-page-3.html">Treppenhausreinigung</a></li>
+  		    <li><a href="service-page-6.html">Glas- und Fensterreinigung</a></li>
+                    <li><a href="service-page-2.html">Grünanlagepflege</a></li>
+                    <li><a href="service-page-5.html">Industriereinigung</a></li>               
+                    <li><a .git email-senderhref="service-page-4.html">Hausmeisterservice</a></li>
+                    <li><a href="service-page-6.html">Zählerstandsablesung</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="karriere.html">Karriere</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-header-top-right">
+                   
+              </div>
+            </div>
+            <a href="#" class="menu-toggle"
+              ><i class="icon-menu"></i><i class="icon-cancel2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Header -->
+    <main class="page-main">
+      <!-- Breadcrumbs Block -->
+      <div class="block breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Kontakt</li>
+          </ul>
+        </div>
+      </div>
+      <!-- //Breadcrumbs Block -->
+      <h1 class="text-center h-decor">Kontakt</h1>
+      <div class="block fullwidth no-pad">
+        <div class="container">
+          
+<div id="map-container">
+    <div id="map-overlay" onclick="enableMap()">Klicken Sie hier, um die Karte zu aktivieren</div>
+    <iframe
+        id="google-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.2202949654375!2d7.0525261!3d51.2205942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8e9c81234567b%3A0xfedcba0987654321!2sLudgerweg%2021%2C%2042329%20Wuppertal!5e0!3m2!1sen!2sde!4v1234567890123"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+    ></iframe>
+</div>
+
+
+
+
+        </div>
+      </div>
+      <div class="block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Unser Büro</h2>
+              <div class="contact-info-sm">
+                <h5>Adresse</h5>
+                <i class="icon icon-map-marker"></i>Ludgerweg 21
+                <br />Wuppertal, 42329 
+              </div>
+              <div class="contact-info-sm">
+                <h5>Rufnummer</h5>
+                <i class="icon icon-technology"></i><a href="tel:01732765432"><a href="tel:01732765432">0173 276 54 32</a></a> 
+              </div>
+              <div class="contact-info-sm">
+                <h5>Öffnungszeiten</h5>
+                <i class="icon icon-clock"></i>Mo-Fr: 9:00-17:00 Uhr 
+                
+              </div>
+            </div>
+            <div class="divider visible-sm visible-xs"></div>
+            <div class="col-md-8">
+              <h2 class="text-center h-lg h-decor">Gerne sind wir für Sie da</h2>
+              <form
+               class="contact-form"
+                id="contactForm"
+                method="post"
+                action="http://localhost:3000/send-mail"
+                 novalidate="novalidate"
+>
+
+                <div class="successform text-center">
+                  <p>Your message was sent successfully!</p>
+                </div>
+                <div class="errorform text-center">
+                  <p>
+                    Something went wrong, try refreshing and submitting the form
+                    again.
+                  </p>
+                </div>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    class="input-custom input-full"
+                    name="name"
+                    placeholder="Vor- und Nachname*"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    class="input-custom input-full"
+                    name="email"
+                    placeholder="Email*"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <textarea
+                    class="textarea-custom input-full"
+                    name="message"
+                    placeholder="Nachricht"
+                  ></textarea>
+                </div>                <br />
+                
+                <div class="input-wrapper">
+                  <label for="captcha_answer">Was ist 2 + 3?</label>
+                  <input
+                    type="text"
+                    class="input-custom input-full"
+                    name="captcha_answer"
+                    placeholder="Ihre Antwort"
+                    required
+                  />
+                </div>
+<button type="submit" class="btn">Absenden</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h6>Kontaktieren Sie uns, um ein kostenloses Angebot zu erhalten.</h6>
+              <ul class="marker-list">
+                <li>Kostenloses und unverbindliches Angebot</li>
+                <li>Keine langen Vertragsbindungen</li>
+                <li>Faire und wettbewerbsfähige Preise</li>
+                <li>Hochwertige Reinigungsleistungen</li>
+                <li>Individueller Leistungen nach Ihren Bedürfnissen</li>
+                <li>Wir stellen alle benötigten Materialien.</li>
+                <li>Langjährige Erfahrung und zufriedene Kunden</li>
+                <li>Flexible Termine und schnelle Reaktion auf Ihre Anfragen</li>
+              </ul>
+            </div>
+            <div class="clearfix visible-sm visible-xs"></div>
+            <div class="col-sm-6 col-md-4">
+              <div class="address-box">
+                <h3>Unser Standort</h3>
+                <div class="contact-info-sm">
+                  <i class="icon icon-map-marker"></i>
+		<b>Reinigungsservice-Hachem</b>		
+	          <br />
+                   Ludgerweg 21 <br />
+                  42329 Wuppertal
+                  <br />
+        	<br /><a href="tel:01732765432">0173 276 54 32</a> <br />
+                  <a href="mailto:info@rs-hachem.de"
+                    >info@rs-hachem.de</a
+                  >          
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              
+    <div class="address-box">
+        <h3>Kontakt per WhatsApp</h3>
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="./images/QR Code.png" alt="WhatsApp QR Code" style="width: 150px; height: auto;">
+</div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://wa.me/491732765432" target="_blank" style="text-decoration: none;">
+                <button class="btn">Schreiben Sie uns auf WhatsApp</button>
+            </a>
+        </div>
+    </div>
+    </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer page-footer--style2">
+      <div class="container">
+        <div class="page-footer-content row">
+          <div class="col-sm-4">
+            <div class="footer-ribbon">
+              <img src="images/footer-ribbon.png" alt="" />
+            </div>
+            <div class="page-footer-text">
+              <p>
+                Kundenzufriedenheit ist uns wichtig und hierfür machen wir uns
+                stark.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h4>Dienstleistungen</h4>
+            <ul class="marker-list">
+              <li>
+                <a href="service-page-1.html">Grund-und-Sonderreinigung</a>
+              </li>
+              <li><a href="service-page-8.html">Bauendreinigung</a></li>
+              <li><a href="service-page-9.html">Büroreinigung</a></li>
+              <li>
+                <a href="service-page-3.html">Treppenreinigung</a>
+              </li>
+              <li>
+                <a href="service-page-7.html">Glas-und Fensterreinigung</a>
+              </li>
+              <li><a href="service-page-6.html">Grünanlagenpflege</a></li>
+              <li><a href="service-page-5.html">Industriereinigung</a></li>
+              <li><a href="service-page-4.html">Hausmeisterservice</a></li>
+   		 <li><a href="service-page-6.html">Zählerstandsablesung</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h4>Kontakt</h4>
+            <div class="page-footer-info">
+              <i class="icon icon-location"></i>
+              <a href="https://www.google.com/maps?q=Ludgerweg+21+42329+Wuppertal" target="_blank" class="google-maps-link">
+            Ludgerweg 21, 42329 Wuppertal
+             </a>
+            </div>
+            <div class="page-footer-info">
+              <i class="icon icon-phone"></i
+              ><a href="Tel.: href="tel:01732765432"><a href="tel:01732765432">0173 276 54 32</a></a> 
+              
+            </div>
+            <div class="page-footer-info">
+              <i class="icon icon-letter"></i
+              ><a href="mailto:info@rs-hachem.de">info@rs-hachem.de</a>
+            </div>
+            <div class="page-footer-info">
+              <i class="icon icon-clock1"></i>Mo-Fr: 9:00-17:00 Uhr <br />
+            </div>
+            <div class="btn-wrap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-container-new">
+  <button class="social-buttons-new">
+    <i class="fa-solid fa-phone"></i>
+    <span class="social-icon-new">
+      <a href="tel:01732765432">01732765432</a>
+    </span>
+  </button>
+  <button class="social-buttons-new">
+    <i class="fa-solid fa-envelope"></i>
+    <span class="social-icon-new">
+      <a href="mailto:info@rs-hachem.de"> info@rs-hachem.</a>
+    </span>
+  </button>
+  <button class="social-buttons-new">
+    <i class="fa-brands fa-facebook"></i>
+    <span class="social-icon-new">
+      <a href="https://www.facebook.com/TERO-System-Rohrbau-GmbH-252313164955897/?fref=ts">facebook.com</a>
+    </span>
+  </button>
+</div>
+<div class="footer-content container-fluid py-3">
+    <div class="footer-flex d-flex justify-content-center align-items-center">
+      <p class="mb-1">© 2024 Reinigungsservice Hachem – Alle Rechte vorbehalten</p>
+      <div class="footer-links d-flex">
+        <a class="footer-link mx-2" href="impressum.html">
+          <i class="fas fa-file-alt"></i> Impressum
+        </a>
+        <a class="footer-link mx-2" href="datenschutz.html">
+          <i class="fas fa-shield-alt"></i> Datenschutz
+        </a>
+      </div>
+    </div>
+  </div>
+    </footer>
+    
+    <!-- /Footer -->
+    <!-- External JavaScripts -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="js/vendor/lightbox.min.js"></script>
+    <script src="js/vendor/jquery.scroll-with-ease.min.js"></script>
+    <script src="js/vendor/jquery.form.js"></script>
+    <script src="js/vendor/jquery.validate.min.js"></script>
+    <script src="js/vendor/moment.js"></script>
+    <script src="js/vendor/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/vendor/jquery.waypoints.min.js"></script>
+    <script src="js/vendor/jquery.countTo.js"></script>
+    <script src="js/vendor/jquery.print.js"></script>
+    <script src="js/vendor/jquery.dotdotdot.min.js"></script>
+    <script src="js/vendor/jquery.doubletaptogo.min.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/jquery.elevateZoom-3.0.8.min.js"></script>
+    <!-- Custom JavaScripts -->
+    <script src="js/custom.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="/server.js"></script>
+
+
+
+  </body>
+</html>
