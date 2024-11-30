@@ -10,9 +10,16 @@ const app = express();
 const port = 3000;
 
 // CORS configuration
+const allowedOrigins = ["http://127.0.0.1:5501", "http://127.0.0.1:5500"];
 app.use(
   cors({
-    origin: "http://127.0.0.1:5501/kontakt.html",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: ["Content-Type"],
   })
@@ -48,6 +55,9 @@ const transporter = nodemailer.createTransport({
 
 // Handle form submission
 app.post("/send-email", upload.single("filename"), (req, res) => {
+  
+  console.log("Request body:", req.body);
+  console.log("Uploaded file:", req.file);
   console.log("Received form submission:", req.body);
   console.log("Received file:", req.file);
 

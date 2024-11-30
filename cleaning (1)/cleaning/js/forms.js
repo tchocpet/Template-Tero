@@ -121,7 +121,8 @@
 							$(form).ajaxSubmit({
 								type: "POST",
 								data: $(form).serialize(),
-								url: "form/process-contact.php",
+								// url: "form/process-contact.php",
+								url: "http://localhost:3000/send-email",
 								success: function success() {
 									$('.successform', $contactform).fadeIn();
 									$orderForm.get(0).reset();
